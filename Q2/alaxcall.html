@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content-Page">
+
+    </div>
+    <button onclick="fetchdata()">Fecth Data</button>
+</body>
+<script>
+    function fetchdata() {
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                document.getElementById("content-Page").innerHTML = httpRequest.responseText
+            }
+        };
+        httpRequest.open("GET", '/gethello', true);
+        httpRequest.send();
+    }
+</script>
+
+</html>
