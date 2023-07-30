@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node script1.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "script1": "node script1.js",
     "script2": "node script2.js",
